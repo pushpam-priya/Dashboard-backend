@@ -1,9 +1,19 @@
 const express = require("express");
 const Part = require("../models/partModel");
 
-const getPart = async (req, res) => {
+const getParts = async (req, res) => {
   try {
     const part = await Part.find();
+    return res.status(200).json(part);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+const getPart = async (req, res) => {
+  try {
+    const partNum = req.params.partNum;
+    const part = await Part.find({partNumber: partNum});
     return res.status(200).json(part);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -58,4 +68,4 @@ const deletePart = async(req,res) => {
 
 
 
-module.exports = { getPart, createPart, updatePart, deletePart };
+module.exports = { getParts, getPart, createPart, updatePart, deletePart };
