@@ -44,6 +44,10 @@ const warehouseSchema = mongoose.Schema({
     description:{
         type: String,
         required: [true, "Please enter description."],
+    },
+    mainWarehouse:{
+        type: Boolean, 
+        default: false
     }
 });
 
