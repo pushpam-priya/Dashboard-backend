@@ -63,3 +63,4 @@ app.use("/test",(req,res)=>{
 
 app.use("/api/parts",require("./routes/partRoutes.js"));
 app.use("/api/warehouse", require("./routes/warehouseRoutes.js"));
+app.use("/api/users", require("./routes/userRoutes.js"));
