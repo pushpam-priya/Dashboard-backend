@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 const { Timestamp } = require('mongodb');
-=======
->>>>>>> origin/main
 const mongoose = require('mongoose')
 
 const warehouseSchema = mongoose.Schema({
@@ -25,7 +22,6 @@ const warehouseSchema = mongoose.Schema({
         type: String,
         required: [true, "Please enter state name."],
     },
-<<<<<<< HEAD
     postalCode:{
         type: String,
         required: [true, "Please enter postal number."],
@@ -35,17 +31,6 @@ const warehouseSchema = mongoose.Schema({
         required: [true, "Please enter first name."],
     },
     lastName:{
-=======
-    postal:{
-        type: String,
-        required: [true, "Please enter postal number."],
-    },
-    first:{
-        type: String,
-        required: [true, "Please enter first name."],
-    },
-    last:{
->>>>>>> origin/main
         type: String,
         required: [true, "Please enter last name."],
     },
@@ -65,12 +50,9 @@ const warehouseSchema = mongoose.Schema({
         type: Boolean, 
         default: false
     }
-<<<<<<< HEAD
 },
 {
     timestamps: true,
-=======
->>>>>>> origin/main
 });
 
 module.exports = mongoose.model("Warehouse", warehouseSchema);

@@ -9,8 +9,4 @@ router.post("/login",loginUser)
 router.get("/current",currentUser)
  
 
-<<<<<<< HEAD
 module.exports = router 
-=======
-module.exports = router
->>>>>>> origin/main

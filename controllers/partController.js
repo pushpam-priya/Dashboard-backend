@@ -4,11 +4,7 @@ const Part = require("../models/partModel");
 const getParts = async (req, res) => {
   try {
     const part = await Part.find();
-<<<<<<< HEAD
     return res.status(200).json(part); 
-=======
-    return res.status(200).json(part);
->>>>>>> origin/main
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
