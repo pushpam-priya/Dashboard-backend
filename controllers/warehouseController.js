@@ -77,7 +77,17 @@ const deleteWarehouse = async (req, res) => {
     catch (err){
         res.status(500).json({ error: err.message});
     }
-}
+};
+
+const getMainWarehouses = async (req, res) => {
+    try {
+      const mainWarehouses = await Warehouse.find({ mainWarehouse: true });
+      res.status(200).json(mainWarehouses);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  };
+  
 
 
-module.exports = { getWarehouses, createWarehouse, getWarehouse, updateWarehouse, deleteWarehouse }
+module.exports = { getWarehouses, createWarehouse, getWarehouse, updateWarehouse, deleteWarehouse, getMainWarehouses }
