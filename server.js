@@ -66,8 +66,6 @@ app.use(cors(
 app.use("/test",(req,res)=>{
     res.json({ message:"Swagger UI" })
 });
-
-
  
 app.use("/api/parts",require("./routes/partRoutes.js"));
 app.use("/api/warehouse", require("./routes/warehouseRoutes.js"));

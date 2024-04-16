@@ -18,9 +18,15 @@ const createWarehouse = async (req, res) => {
         street, 
         city, 
         state, 
+<<<<<<< HEAD
         postalCode, 
         firstName, 
         lastName, 
+=======
+        postal, 
+        first, 
+        last, 
+>>>>>>> origin/main
         phone, 
         division,
         description,
@@ -34,9 +40,15 @@ const createWarehouse = async (req, res) => {
             street, 
             city, 
             state, 
+<<<<<<< HEAD
             postalCode, 
             firstName, 
             lastName, 
+=======
+            postal, 
+            first, 
+            last, 
+>>>>>>> origin/main
             phone, 
             division,
             description,
@@ -49,6 +61,7 @@ const createWarehouse = async (req, res) => {
     }
 };
 
+<<<<<<< HEAD
 const getWarehouse = async (req, res) => {
     try {
         const warehouse = await Warehouse.findById(req.params.id);
@@ -81,3 +94,17 @@ const deleteWarehouse = async (req, res) => {
 
 
 module.exports = { getWarehouses, createWarehouse, getWarehouse, updateWarehouse, deleteWarehouse }
+=======
+// const getWarehouse = async (req, res) => {
+//     try {
+//         const partNum = req.params.partNum;
+//         const warehouse = await Warehouse.find({partNumber: partNum});
+//     }
+//     catch (err) {
+//         res.status(500).json({error: err.message});
+//     }
+// }
+
+
+module.exports = { getWarehouses, createWarehouse }
+>>>>>>> origin/main
