@@ -19,11 +19,7 @@ const registerUser = async (req, res) => {
         address,
         phone,
         password: hashedPassword
-<<<<<<< HEAD
       }); 
-=======
-      });
->>>>>>> origin/main
       if(user){
         return res.status(201).json({_id:user.id, email:user.email});
       }

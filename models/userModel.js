@@ -19,11 +19,7 @@ const userSchema = mongoose.Schema({
         required: [true, "Please enter address"]
     },
     phone: {
-<<<<<<< HEAD
         type: String, 
-=======
-        type: String,
->>>>>>> origin/main
         required: [true, "Please enter phone number"]
     },
     password: {
