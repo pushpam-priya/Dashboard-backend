@@ -7,8 +7,9 @@ const { getWarehouses, createWarehouse, getWarehouse, updateWarehouse, deleteWar
 // router.put('/update/:id', updateWarehouse);
 // router.delete('/delete/:id', deleteWarehouse);
 
+router.get("/main", getMainWarehouses);
 router.route("/").get(getWarehouses).post(createWarehouse);
 router.route("/:id").get(getWarehouse).put(updateWarehouse).delete(deleteWarehouse);
-router.get('/main', getMainWarehouses);
+
 
 module.exports = router
